@@ -12,7 +12,12 @@ public class Paciente {
     private ArrayList<Peticion> peticiones;
 
     public Paciente() {
-        this.peticiones = new ArrayList<Peticion>();
+      this.dni = dni;
+      this.nombre = nombre;
+      this.domicilio = domicilio;
+      this.mail = mail;
+      this.edad = edad;
+      this.peticiones = new ArrayList<Peticion>();
     }
 
     public int getDni() {
@@ -61,5 +66,18 @@ public class Paciente {
 
     public void setEdad(int edad) {
         this.edad = edad;
+    }
+
+    @Override
+    public String toString() {
+        return "Paciente{" +
+            "dni=" + dni +
+            ", nombre='" + nombre + '\'' +
+            ", domicilio='" + domicilio + '\'' +
+            ", mail='" + mail + '\'' +
+            ", sexo='" + sexo + '\'' +
+            ", edad=" + edad +
+            ", peticiones=" + peticiones +
+            '}';
     }
 }

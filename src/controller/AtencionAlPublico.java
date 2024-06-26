@@ -16,7 +16,14 @@ public class AtencionAlPublico {
         this.peticiones = new ArrayList<>();
     }
 
-    public void altaPaciente(Paciente paciente) {
+    public void altaPaciente(int dni, String nombre, String domicilio, String mail, String sexo, int edad) {
+        Paciente paciente = new Paciente();
+        paciente.setDni(dni);
+        paciente.setNombre(nombre);
+        paciente.setDomicilio(domicilio);
+        paciente.setMail(mail);
+        paciente.setSexo(sexo);
+        paciente.setEdad(edad);
         this.pacientes.add(paciente);
     }
 
@@ -35,5 +42,9 @@ public class AtencionAlPublico {
     }
     public void consultarResultados(Peticion peticionId) {
         //TODO
+    }
+
+    public ArrayList<Paciente> getPacientes() {
+        return pacientes;
     }
 }

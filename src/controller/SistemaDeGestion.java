@@ -1,6 +1,7 @@
 package controller;
 
 import model.Paciente;
+import model.RolUsuario;
 import model.Sucursal;
 import model.Usuario;
 
@@ -15,8 +16,13 @@ public class SistemaDeGestion {
         this.sucursales = new ArrayList<>();
         this.pacientes = new ArrayList<>();
     }
-    public void altaUsuario(Usuario usuario) {
-        //TODO
+    public void altaUsuario(String nombre, String usuario, String password, RolUsuario rol) {
+        Usuario nuevoUsuario = new Usuario();
+        nuevoUsuario.setNombre(nombre);
+        nuevoUsuario.setUsuario(usuario);
+        nuevoUsuario.setPassword(password);
+        nuevoUsuario.setRol(rol);
+        this.usuarios.add(nuevoUsuario);
     }
     public void altaSucursal(Sucursal sucursal) {
         //TODO

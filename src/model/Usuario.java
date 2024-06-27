@@ -5,7 +5,7 @@ import java.util.Date;
 public class Usuario {
     private String nombre;
     private String email;
-    private String user;
+    private String usuario;
     private String password;
     private String domicilio;
     private int dni;
@@ -13,6 +13,10 @@ public class Usuario {
     private RolUsuario rol;
 
     public Usuario() {
+        this.nombre = nombre;
+        this.usuario = usuario;
+        this.password = password;
+        this.rol = rol;
     }
 
     public String getNombre() {
@@ -31,12 +35,12 @@ public class Usuario {
         this.email = email;
     }
 
-    public String getUser() {
-        return user;
+    public String getUsuario() {
+        return usuario;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
 
     public String getPassword() {

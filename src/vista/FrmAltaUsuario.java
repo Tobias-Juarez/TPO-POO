@@ -50,21 +50,16 @@ public class FrmAltaUsuario extends JDialog {
         crearUsuarioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                JOptionPane.showMessageDialog(null, "Usuario creado");
-
                 String nombre = txtNombre.getText();
                 String usuario = txtUsuario.getText();
                 String password = txtPassword.getText();
                 RolUsuario rol = (RolUsuario) cbRolUsuario.getSelectedItem();
                 if (nombre.isEmpty() || usuario.isEmpty() || password.isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Debe completar todos los campos");
-                    return;
                 }
                 else {
                     if (usuarios.stream().anyMatch(u -> u.getUsuario().equals(usuario))) {
                         JOptionPane.showMessageDialog(null, "El usuario ya existe");
-                        return;
                     } else {
                         Usuario nuevoUsuario = new Usuario();
                         nuevoUsuario.setNombre(nombre);

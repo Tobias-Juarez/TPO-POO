@@ -16,12 +16,7 @@ public class SistemaDeGestion {
         this.sucursales = new ArrayList<>();
         this.pacientes = new ArrayList<>();
     }
-    public void altaUsuario(String nombre, String usuario, String password, RolUsuario rol) {
-        Usuario nuevoUsuario = new Usuario();
-        nuevoUsuario.setNombre(nombre);
-        nuevoUsuario.setUsuario(usuario);
-        nuevoUsuario.setPassword(password);
-        nuevoUsuario.setRol(rol);
+    public void altaUsuario(Usuario nuevoUsuario) {
         this.usuarios.add(nuevoUsuario);
     }
     public void altaSucursal(Sucursal sucursal) {
@@ -29,5 +24,9 @@ public class SistemaDeGestion {
     }
     public void eliminarSucursal(int sucursalId) {
         //TODO
+    }
+
+    public ArrayList<Usuario> getUsuarios() {
+        return this.usuarios;
     }
 }

@@ -13,10 +13,6 @@ public class Usuario {
     private RolUsuario rol;
 
     public Usuario() {
-        this.nombre = nombre;
-        this.usuario = usuario;
-        this.password = password;
-        this.rol = rol;
     }
 
     public String getNombre() {

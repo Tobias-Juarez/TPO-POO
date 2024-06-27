@@ -23,8 +23,10 @@ public class FrmAltaUsuario extends JDialog {
     private JLabel lblPassword;
 
     private List <RolUsuario> roles = new ArrayList<RolUsuario>();
-    private final ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
-    public FrmAltaUsuario(Window owner, String titulo) {
+
+    private Usuario nuevoUsuario;
+
+    public FrmAltaUsuario(Window owner, String titulo, ArrayList<Usuario> usuarios) {
         super(owner, titulo);
         setContentPane(pnlPrincipal);
         setModal(true);
@@ -37,16 +39,16 @@ public class FrmAltaUsuario extends JDialog {
         DefaultComboBoxModel model = new DefaultComboBoxModel();
         model.addAll(roles);
         cbRolUsuario.setModel(model);
-        asociarEventos();
+        asociarEventos(usuarios);
 
 
     }
 
-    public ArrayList<Usuario> getUsuarios() {
-        return usuarios;
+    public Usuario getUsuario() {
+        return nuevoUsuario;
     }
 
-    private void asociarEventos() {
+    private void asociarEventos(ArrayList<Usuario> usuarios) {
         crearUsuarioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -61,7 +63,7 @@ public class FrmAltaUsuario extends JDialog {
                     if (usuarios.stream().anyMatch(u -> u.getUsuario().equals(usuario))) {
                         JOptionPane.showMessageDialog(null, "El usuario ya existe");
                     } else {
-                        Usuario nuevoUsuario = new Usuario();
+                        nuevoUsuario = new Usuario();
                         nuevoUsuario.setNombre(nombre);
                         nuevoUsuario.setUsuario(usuario);
                         nuevoUsuario.setPassword(password);

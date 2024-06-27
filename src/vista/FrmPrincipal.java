@@ -1,19 +1,23 @@
 package vista;
 
+import controller.SistemaDeGestion;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import model.Usuario;
+import vista.menu.FrmMenu;
 
 public class FrmPrincipal  extends JFrame {
     private JPanel pnlPrincipal;
     private JTextField txtUsuario;
-    private JTextField txtContraseña;
+    private JTextField txtPassword;
     private JButton iniciarSesionButton;
     private JLabel usuarioLabel;
     private JLabel contraseñaLabel;
     private JButton crearUsuarioButton;
 
     private FrmPrincipal self;
+    private SistemaDeGestion sistemaDeGestion = new SistemaDeGestion();
 
     public FrmPrincipal(String titulo) {
         super(titulo);
@@ -28,15 +32,24 @@ public class FrmPrincipal  extends JFrame {
         iniciarSesionButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FrmMenu frame = new FrmMenu(self, "Menú");
-                frame.setVisible(true);
+                String usuario = txtUsuario.getText();
+                String password = txtPassword.getText();
+                if(sistemaDeGestion.getUsuarios().stream().anyMatch(u -> u.getUsuario().equals(usuario) && u.getPassword().equals(password))) {
+                    FrmMenu frame = new FrmMenu(self, "Menú");
+                    frame.setVisible(true);
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "El usuario o contraseña no existe");
+                }
             }
         });
         crearUsuarioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FrmAltaUsuario frame = new FrmAltaUsuario(self, "Crear Usuario");
+                FrmAltaUsuario frame = new FrmAltaUsuario(self, "Crear Usuario",sistemaDeGestion.getUsuarios());
                 frame.setVisible(true);
+                Usuario nuevoUsuario = frame.getUsuario();
+                sistemaDeGestion.altaUsuario(nuevoUsuario);
             }
         });
     }

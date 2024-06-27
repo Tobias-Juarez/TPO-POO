@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d81d6ca-4a30-473f-863d-a25d98b721e2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/vista/FrmAltaUsuario.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/FrmAltaUsuario.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vista/FrmAltaUsuario.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vista/FrmAltaUsuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vista/FrmMenu.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vista/FrmMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vista/FrmPrincipal.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vista/FrmPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/SistemaDeGestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/SistemaDeGestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +114,7 @@
       <workItem from="1718399678633" duration="5347000" />
       <workItem from="1718407969430" duration="7611000" />
       <workItem from="1719322158025" duration="5880000" />
-      <workItem from="1719445381047" duration="15766000" />
+      <workItem from="1719445381047" duration="15456000" />
     </task>
     <servers />
   </component>

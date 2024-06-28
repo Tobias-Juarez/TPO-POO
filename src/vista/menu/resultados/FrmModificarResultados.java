@@ -1,14 +1,23 @@
 package vista.menu.resultados;
 
 import java.awt.Window;
+import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 public class FrmModificarResultados extends JDialog {
 
 
     private JPanel pnlPrincipal;
+  private JTextArea txtValores;
+  private JLabel lblValores;
+  private JLabel lblId;
+  private JTextField txtId;
+  private JButton modificarResultadoButton;
 
   public FrmModificarResultados(Window owner, String titulo) {
     super(owner, titulo);

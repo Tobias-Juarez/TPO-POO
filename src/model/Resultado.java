@@ -3,6 +3,7 @@ package model;
 import java.util.ArrayList;
 
 public class Resultado {
+    private int id;
     private ArrayList<Valor> datos;
     public Resultado() {
         this.datos = new ArrayList<>();

@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FrmAltaUsuario extends JDialog {
+public class FrmCrearUsuario extends JDialog {
 
     private JPanel pnlPrincipal;
     private JTextField txtUsuario;
@@ -26,7 +26,7 @@ public class FrmAltaUsuario extends JDialog {
 
     private Usuario nuevoUsuario;
 
-    public FrmAltaUsuario(Window owner, String titulo, ArrayList<Usuario> usuarios) {
+    public FrmCrearUsuario(Window owner, String titulo, ArrayList<Usuario> usuarios) {
         super(owner, titulo);
         setContentPane(pnlPrincipal);
         setModal(true);

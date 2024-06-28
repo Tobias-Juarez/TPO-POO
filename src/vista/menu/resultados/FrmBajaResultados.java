@@ -1,13 +1,19 @@
 package vista.menu.resultados;
 
 import java.awt.Window;
+import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class FrmBajaResultados extends JDialog{
 
   private JPanel pnlPrincipal;
+  private JLabel lblIdResultado;
+  private JTextField txtResultado;
+  private JButton darDeBajaButton;
 
   public FrmBajaResultados(Window owner, String titulo) {
     super(owner, titulo);

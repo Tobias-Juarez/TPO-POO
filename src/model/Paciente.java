@@ -9,7 +9,25 @@ public class Paciente {
     private String mail;
     private String sexo;
     private int edad;
+    private ArrayList<Resultado> resultados;
+
     private ArrayList<Peticion> peticiones;
+
+    public ArrayList<Resultado> getResultados() {
+        return resultados;
+    }
+
+    public void setResultados(ArrayList<Resultado> resultados) {
+        this.resultados = resultados;
+    }
+
+    public ArrayList<Peticion> getPeticiones() {
+        return peticiones;
+    }
+
+    public void setPeticiones(ArrayList<Peticion> peticiones) {
+        this.peticiones = peticiones;
+    }
 
     public Paciente() {
       this.dni = dni;

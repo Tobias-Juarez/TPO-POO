@@ -7,16 +7,19 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import vista.menu.practicas.FrmAltaPractica;
+
+import model.RolUsuario;
 
 public class FrmResultados extends JDialog {
   private JPanel pnlPrincipal;
   private JButton crearResultadoButton;
   private JButton modificarResultadoButton;
   private JButton eliminarResultadoButton;
+  private JButton consultarResultadosButton;
+  private JButton cargarMuestraButton;
   private FrmResultados self;
 
-  public FrmResultados(Window owner, String titulo) {
+  public FrmResultados(Window owner, String titulo, RolUsuario rol) {
     super(owner, titulo);
     setContentPane(pnlPrincipal);
     setModal(true);
@@ -24,11 +27,23 @@ public class FrmResultados extends JDialog {
     setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     setLocationRelativeTo(null);
     this.self = this;
-    asociarEventos();
+    asociarEventos(rol);
+
   }
 
-  private void asociarEventos() {
+  private void asociarEventos(RolUsuario rol) {
+    if (rol == RolUsuario.LABORATORISTA) {
+      eliminarResultadoButton.setEnabled(false);
+      consultarResultadosButton.setEnabled(false);
+    }
+    if (rol == RolUsuario.RECEPCIONISTA) {
+      crearResultadoButton.setEnabled(false);
+      modificarResultadoButton.setEnabled(false);
+      eliminarResultadoButton.setEnabled(false);
+      cargarMuestraButton.setEnabled(false);
+    }
     crearResultadoButton.addActionListener(new ActionListener() {
+
       @Override
       public void actionPerformed(ActionEvent e) {
         FrmAltaResultados frame = new FrmAltaResultados(self,"Alta Resultados");
@@ -48,6 +63,20 @@ public class FrmResultados extends JDialog {
       public void actionPerformed(ActionEvent e) {
         FrmBajaResultados frame = new FrmBajaResultados(self,"Baja Resultados");
         frame.setVisible(true);
+      }
+    });
+    cargarMuestraButton.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        FrmCargarMuestra frame = new FrmCargarMuestra(self,"Cargar Muestra");
+        frame.setVisible(true);
+
+      }
+    });
+    consultarResultadosButton.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+
       }
     });
   }

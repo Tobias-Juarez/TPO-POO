@@ -5,35 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d81d6ca-4a30-473f-863d-a25d98b721e2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_06_2024__1_33AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_06_2024__1_33AM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmCargarMuestra.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmCargarMuestra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmConsultarResultados.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmConsultarResultados.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/AtencionAlPublico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AtencionAlPublico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Laboratorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Laboratorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/SistemaDeGestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/SistemaDeGestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/FrmPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/FrmPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Paciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Paciente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Resultado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Resultado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Valor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/FrmCrearUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/FrmCrearUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/menu/FrmMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/FrmMenu.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vista/menu/FrmMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/FrmMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/pacientes/FrmAltaPaciente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/pacientes/FrmAltaPaciente.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/pacientes/FrmModificarPaciente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/pacientes/FrmModificarPaciente.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/peticiones/FrmAltaPeticion.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/peticiones/FrmAltaPeticion.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/peticiones/FrmModificarPeticion.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/peticiones/FrmModificarPeticion.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/practicas/FrmAltaPractica.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/practicas/FrmAltaPractica.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/practicas/FrmModificarPractica.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/practicas/FrmModificarPractica.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/resultados/FrmAltaResultados.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmAltaResultados.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/resultados/FrmBajaResultados.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmBajaResultados.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/resultados/FrmModificarResultados.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmModificarResultados.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/sucursales/FrmAltaSucursal.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/sucursales/FrmAltaSucursal.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/sucursales/FrmAltaSucursal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/sucursales/FrmAltaSucursal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/sucursales/FrmBajaSucursal.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/sucursales/FrmBajaSucursal.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/sucursales/FrmBajaSucursal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/sucursales/FrmBajaSucursal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/sucursales/FrmModificarSucursal.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/sucursales/FrmModificarSucursal.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/sucursales/FrmModificarSucursal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/sucursales/FrmModificarSucursal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/usuarios/FrmAltaUsuario.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/usuarios/FrmAltaUsuario.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/usuarios/FrmAltaUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/usuarios/FrmAltaUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/usuarios/FrmBajaUsuario.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/usuarios/FrmBajaUsuario.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/usuarios/FrmBajaUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/usuarios/FrmBajaUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/usuarios/FrmModificarUsuario.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/usuarios/FrmModificarUsuario.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/usuarios/FrmModificarUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/usuarios/FrmModificarUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/menu/pacientes/FrmPacientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/pacientes/FrmPacientes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/menu/peticiones/FrmPeticiones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/peticiones/FrmPeticiones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/menu/resultados/FrmResultados.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmResultados.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/menu/resultados/FrmResultados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmResultados.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -7,6 +7,9 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
+import model.RolUsuario;
+import vista.menu.FrmMenu;
 import vista.menu.pacientes.FrmAltaPaciente;
 import vista.menu.resultados.FrmBajaResultados;
 
@@ -17,18 +20,22 @@ public class FrmPeticiones extends JDialog {
   private JButton eliminarPeticionButton;
   private FrmPeticiones self;
 
-  public FrmPeticiones(Window owner, String titulo) {
+  public FrmPeticiones(Window owner, String titulo, RolUsuario rol) {
     super(owner, titulo);
     setContentPane(pnlPrincipal);
     setModal(true);
     setSize(500, 400);
     setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     setLocationRelativeTo(null);
-    asociarEventos();
+    asociarEventos(rol);
     this.self = this;
   }
 
-  private void asociarEventos() {
+
+  private void asociarEventos(RolUsuario rol) {
+    if (rol == RolUsuario.RECEPCIONISTA) {
+      eliminarPeticionButton.setEnabled(false);
+    }
     crearPeticionButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {

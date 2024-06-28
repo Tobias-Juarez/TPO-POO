@@ -1,5 +1,7 @@
 package vista.menu.pacientes;
 
+import model.RolUsuario;
+
 import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,7 +18,7 @@ public class FrmPacientes extends JDialog {
   private JButton eliminarPacienteButton;
   private FrmPacientes self;
 
-  public FrmPacientes(Window owner, String titulo) {
+  public FrmPacientes(Window owner, String titulo, RolUsuario rol) {
     super(owner, titulo);
     setContentPane(pnlPrincipal);
     setModal(true);
@@ -24,10 +26,13 @@ public class FrmPacientes extends JDialog {
     setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     setLocationRelativeTo(null);
     this.self = this;
-    asociarEventos();
+    asociarEventos(rol);
   }
 
-  private void asociarEventos() {
+  private void asociarEventos(RolUsuario rol) {
+    if (rol == RolUsuario.RECEPCIONISTA) {
+      eliminarPacienteButton.setEnabled(false);
+    }
     crearPacienteButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {

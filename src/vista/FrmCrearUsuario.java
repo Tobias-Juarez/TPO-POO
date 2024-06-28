@@ -56,7 +56,7 @@ public class FrmCrearUsuario extends JDialog {
                 String usuario = txtUsuario.getText();
                 String password = txtPassword.getText();
                 RolUsuario rol = (RolUsuario) cbRolUsuario.getSelectedItem();
-                if (nombre.isEmpty() || usuario.isEmpty() || password.isEmpty()) {
+                if (nombre.isEmpty() || usuario.isEmpty() || password.isEmpty() || rol == null) {
                     JOptionPane.showMessageDialog(null, "Debe completar todos los campos");
                 }
                 else {

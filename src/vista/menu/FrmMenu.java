@@ -9,7 +9,6 @@ import controller.AtencionAlPublico;
 import controller.Laboratorio;
 import controller.SistemaDeGestion;
 import model.RolUsuario;
-import vista.FrmPrincipal;
 import vista.menu.pacientes.FrmPacientes;
 import vista.menu.peticiones.FrmPeticiones;
 import vista.menu.practicas.FrmPracticas;
@@ -35,16 +34,28 @@ public class FrmMenu extends JDialog {
         setSize(500, 400);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
-        asociarEventos();
+        asociarEventos(rol);
         this.self = this;
 
     }
 
-    private void asociarEventos() {
+    private void asociarEventos(RolUsuario rol) {
+        if (rol == RolUsuario.RECEPCIONISTA) {
+            practicasButton.setEnabled(false);
+            usuariosButton.setEnabled(false);
+            sucursalesButton.setEnabled(false);
+        }
+        else if (rol == RolUsuario.LABORATORISTA) {
+            pacientesButton.setEnabled(false);
+            peticionesButton.setEnabled(false);
+            sucursalesButton.setEnabled(false);
+            usuariosButton.setEnabled(false);
+            practicasButton.setEnabled(false);
+        }
         pacientesButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FrmPacientes frame = new FrmPacientes(self, "Pacientes");
+                FrmPacientes frame = new FrmPacientes(self, "Pacientes", rol);
                 frame.setVisible(true);
             }
         });
@@ -67,7 +78,7 @@ public class FrmMenu extends JDialog {
         peticionesButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FrmPeticiones frame = new FrmPeticiones(self, "Peticiones");
+                FrmPeticiones frame = new FrmPeticiones(self, "Peticiones", rol);
                 frame.setVisible(true);
 
             }
@@ -75,7 +86,7 @@ public class FrmMenu extends JDialog {
         resultadosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FrmResultados frame = new FrmResultados(self, "Resultados");
+                FrmResultados frame = new FrmResultados(self, "Resultados", rol);
                 frame.setVisible(true);
 
             }

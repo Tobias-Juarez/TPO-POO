@@ -4,11 +4,21 @@ import java.util.ArrayList;
 
 public class Resultado {
     private int id;
-    private ArrayList<Valor> datos;
-    public Resultado() {
-        this.datos = new ArrayList<>();
+    private String datos;
+
+    public int getId() {
+        return id;
     }
-    public void addDato(Valor dato) {
-        this.datos.add(dato);
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDatos() {
+        return datos;
+    }
+
+    public void setDatos(String datos) {
+        this.datos = datos;
     }
 }

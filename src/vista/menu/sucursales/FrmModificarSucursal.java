@@ -1,16 +1,21 @@
 package vista.menu.sucursales;
 
 import java.awt.Window;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 public class FrmModificarSucursal extends JDialog {
 
 
   private JPanel pnlPrincipal;
+    private JLabel lblId;
+    private JTextField txtIdSucursal;
+    private JLabel lblDireccion;
+    private JTextField txtDireccion;
+    private JLabel lblNumero;
+    private JTextField txtNumero;
+    private JButton modificarSucursalButton;
 
-  public FrmModificarSucursal(Window owner, String titulo) {
+    public FrmModificarSucursal(Window owner, String titulo) {
     super(owner, titulo);
     setContentPane(pnlPrincipal);
     setModal(true);

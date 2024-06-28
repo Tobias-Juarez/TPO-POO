@@ -1,13 +1,18 @@
 package vista.menu.sucursales;
 
 import java.awt.Window;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 public class FrmAltaSucursal extends JDialog {
 
   private JPanel pnlPrincipal;
+    private JTextField txtIdSucursal;
+  private JTextField txtDireccion;
+  private JTextField txtNumero;
+  private JButton crearSucursalButton;
+  private JLabel lblId;
+  private JLabel lblDireccion;
+  private JLabel lblNumero;
 
   public FrmAltaSucursal(Window owner, String titulo) {
     super(owner, titulo);

@@ -1,15 +1,16 @@
 package vista.menu.sucursales;
 
 import java.awt.Window;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 public class FrmBajaSucursal extends JDialog{
 
   private JPanel pnlPrincipal;
+    private JLabel lblSucursal;
+    private JTextField txtIdSucursal;
+    private JButton darDeBajaButton;
 
-  public FrmBajaSucursal(Window owner, String titulo) {
+    public FrmBajaSucursal(Window owner, String titulo) {
     super(owner, titulo);
     setContentPane(pnlPrincipal);
     setModal(true);

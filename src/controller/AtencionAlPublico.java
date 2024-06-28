@@ -7,13 +7,20 @@ import model.Usuario;
 import java.util.ArrayList;
 
 public class AtencionAlPublico {
+    private static AtencionAlPublico instance;
     private ArrayList<Paciente> pacientes;
     private ArrayList<Peticion> peticiones;
     private ArrayList<Usuario> usuarios;
 
-    public AtencionAlPublico() {
+    private AtencionAlPublico() {
         this.pacientes = new ArrayList<>();
         this.peticiones = new ArrayList<>();
+    }
+    public static AtencionAlPublico getInstance() {
+        if (instance == null) {
+            instance = new AtencionAlPublico();
+        }
+        return instance;
     }
 
     public void altaPaciente(int dni, String nombre, String domicilio, String mail, String sexo, int edad) {

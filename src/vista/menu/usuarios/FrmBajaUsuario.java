@@ -1,14 +1,15 @@
 package vista.menu.usuarios;
 
 import java.awt.Window;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 public class FrmBajaUsuario extends JDialog {
 
 
   private JPanel pnlPrincipal;
+  private JLabel lblSucursal;
+  private JTextField txtIdSucursal;
+  private JButton darDeBajaButton;
 
   public FrmBajaUsuario(Window owner, String titulo) {
     super(owner, titulo);

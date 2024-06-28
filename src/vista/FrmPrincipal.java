@@ -1,9 +1,13 @@
 package vista;
 
+import controller.AtencionAlPublico;
+import controller.Laboratorio;
 import controller.SistemaDeGestion;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import model.RolUsuario;
 import model.Usuario;
 import vista.menu.FrmMenu;
 
@@ -16,8 +20,11 @@ public class FrmPrincipal  extends JFrame {
     private JLabel contraseñaLabel;
     private JButton crearUsuarioButton;
 
-    private FrmPrincipal self;
-    private SistemaDeGestion sistemaDeGestion = new SistemaDeGestion();
+    private final FrmPrincipal self;
+    private final SistemaDeGestion sistemaDeGestion = SistemaDeGestion.getInstance();
+    private final Laboratorio laboratorio = Laboratorio.getInstance();
+    private final AtencionAlPublico atencionAlPublico = AtencionAlPublico.getInstance();
+
 
     public FrmPrincipal(String titulo) {
         super(titulo);
@@ -35,7 +42,8 @@ public class FrmPrincipal  extends JFrame {
                 String usuario = txtUsuario.getText();
                 String password = txtPassword.getText();
                 if(sistemaDeGestion.getUsuarios().stream().anyMatch(u -> u.getUsuario().equals(usuario) && u.getPassword().equals(password))) {
-                    FrmMenu frame = new FrmMenu(self, "Menú");
+                    RolUsuario rol = getRol(usuario);
+                    FrmMenu frame = new FrmMenu(self, "Menú",rol,sistemaDeGestion, laboratorio,atencionAlPublico);
                     frame.setVisible(true);
                 }
                 else {
@@ -52,6 +60,10 @@ public class FrmPrincipal  extends JFrame {
                 sistemaDeGestion.altaUsuario(nuevoUsuario);
             }
         });
+    }
+    private RolUsuario getRol(String usuario){
+
+        return sistemaDeGestion.getUsuarios().stream().filter(u -> u.getUsuario().equals(usuario)).findFirst().get().getRol();
     }
     public static void main(String[] args) {
         FrmPrincipal frame = new FrmPrincipal("Sistema de Gestión de Laboratorio");

@@ -4,6 +4,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 import java.awt.*;
+
+import controller.AtencionAlPublico;
+import controller.Laboratorio;
+import controller.SistemaDeGestion;
+import model.RolUsuario;
+import vista.FrmPrincipal;
 import vista.menu.pacientes.FrmPacientes;
 import vista.menu.peticiones.FrmPeticiones;
 import vista.menu.practicas.FrmPracticas;
@@ -22,7 +28,7 @@ public class FrmMenu extends JDialog {
     private FrmMenu self;
 
 
-    public FrmMenu(Window owner, String titulo) {
+    public FrmMenu(Window owner, String titulo, RolUsuario rol, SistemaDeGestion sistemaDeGestion, Laboratorio laboratorio, AtencionAlPublico atencionAlPublico) {
         super(owner, titulo);
         setContentPane(pnlPrincipal);
         setModal(true);

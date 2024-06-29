@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d81d6ca-4a30-473f-863d-a25d98b721e2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmCargarMuestra.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmCargarMuestra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmConsultarResultados.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmConsultarResultados.java" afterDir="false" />
+    <list default="true" id="0d81d6ca-4a30-473f-863d-a25d98b721e2" name="Changes" comment="Funcionalidades nuevas">
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Paciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Paciente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Resultado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Resultado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Valor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/FrmCrearUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/FrmCrearUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/FrmMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/FrmMenu.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/FrmMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/FrmMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/pacientes/FrmPacientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/pacientes/FrmPacientes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/peticiones/FrmPeticiones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/peticiones/FrmPeticiones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/resultados/FrmResultados.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmResultados.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/menu/resultados/FrmCargarMuestra.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmCargarMuestra.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/menu/resultados/FrmCargarMuestra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmCargarMuestra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/menu/resultados/FrmConsultarResultados.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmConsultarResultados.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/menu/resultados/FrmConsultarResultados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmConsultarResultados.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vista/menu/resultados/FrmResultados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmResultados.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,6 +132,15 @@
       <workItem from="1719322158025" duration="5880000" />
       <workItem from="1719445381047" duration="15456000" />
     </task>
+    <task id="LOCAL-00001" summary="Funcionalidades nuevas">
+      <option name="closed" value="true" />
+      <created>1719617639785</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719617639785</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +162,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Funcionalidades nuevas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Funcionalidades nuevas" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

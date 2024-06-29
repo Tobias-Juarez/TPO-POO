@@ -76,6 +76,8 @@ public class FrmResultados extends JDialog {
     consultarResultadosButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
+        FrmConsultarResultados frame = new FrmConsultarResultados(self,"Consultar Resultados");
+        frame.setVisible(true);
 
       }
     });

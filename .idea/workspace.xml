@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d81d6ca-4a30-473f-863d-a25d98b721e2" name="Changes" comment="Funcionalidades nuevas">
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/resultados/FrmCargarMuestra.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmCargarMuestra.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/resultados/FrmCargarMuestra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmCargarMuestra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/resultados/FrmConsultarResultados.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmConsultarResultados.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/resultados/FrmConsultarResultados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmConsultarResultados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/menu/resultados/FrmResultados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/resultados/FrmResultados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/SistemaDeGestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/SistemaDeGestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/FrmCrearUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/FrmCrearUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/FrmPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/FrmPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/menu/FrmMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/FrmMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/menu/usuarios/FrmAltaUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/usuarios/FrmAltaUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/menu/usuarios/FrmUsuarios.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/usuarios/FrmUsuarios.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/menu/usuarios/FrmUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/menu/usuarios/FrmUsuarios.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +56,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/B070135/Uade/TPO-POO/src/vista/menu/peticiones",
+    "last_opened_file_path": "C:/Users/B070135/Workspace/zs-enrich-reports-ui",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -114,7 +117,6 @@
     <attachedChunks>
       <set>
         <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
         <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
       </set>
     </attachedChunks>

@@ -54,10 +54,8 @@ public class FrmPrincipal  extends JFrame {
         crearUsuarioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FrmCrearUsuario frame = new FrmCrearUsuario(self, "Crear Usuario",sistemaDeGestion.getUsuarios());
+                FrmCrearUsuario frame = new FrmCrearUsuario(self, "Crear Usuario",sistemaDeGestion);
                 frame.setVisible(true);
-                Usuario nuevoUsuario = frame.getUsuario();
-                sistemaDeGestion.altaUsuario(nuevoUsuario);
             }
         });
     }

@@ -1,5 +1,6 @@
 package vista;
 
+import controller.SistemaDeGestion;
 import model.RolUsuario;
 import model.Usuario;
 
@@ -26,7 +27,7 @@ public class FrmCrearUsuario extends JDialog {
 
     private Usuario nuevoUsuario;
 
-    public FrmCrearUsuario(Window owner, String titulo, ArrayList<Usuario> usuarios) {
+    public FrmCrearUsuario(Window owner, String titulo, SistemaDeGestion sistemaDeGestion) {
         super(owner, titulo);
         setContentPane(pnlPrincipal);
         setModal(true);
@@ -39,7 +40,7 @@ public class FrmCrearUsuario extends JDialog {
         DefaultComboBoxModel model = new DefaultComboBoxModel();
         model.addAll(roles);
         cbRolUsuario.setModel(model);
-        asociarEventos(usuarios);
+        asociarEventos(sistemaDeGestion);
 
 
     }
@@ -48,7 +49,7 @@ public class FrmCrearUsuario extends JDialog {
         return nuevoUsuario;
     }
 
-    private void asociarEventos(ArrayList<Usuario> usuarios) {
+    private void asociarEventos(SistemaDeGestion sistemaDeGestion) {
         crearUsuarioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -60,7 +61,7 @@ public class FrmCrearUsuario extends JDialog {
                     JOptionPane.showMessageDialog(null, "Debe completar todos los campos");
                 }
                 else {
-                    if (usuarios.stream().anyMatch(u -> u.getUsuario().equals(usuario))) {
+                    if (sistemaDeGestion.getUsuarios().stream().anyMatch(u -> u.getUsuario().equals(usuario))) {
                         JOptionPane.showMessageDialog(null, "El usuario ya existe");
                     } else {
                         nuevoUsuario = new Usuario();
@@ -68,7 +69,7 @@ public class FrmCrearUsuario extends JDialog {
                         nuevoUsuario.setUsuario(usuario);
                         nuevoUsuario.setPassword(password);
                         nuevoUsuario.setRol(rol);
-                        usuarios.add(nuevoUsuario);
+                        sistemaDeGestion.altaUsuario(nuevoUsuario);
                         JOptionPane.showMessageDialog(null, "Usuario creado");
                         dispose();
                     }

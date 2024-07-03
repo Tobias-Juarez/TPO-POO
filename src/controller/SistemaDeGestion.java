@@ -36,4 +36,13 @@ public class SistemaDeGestion {
     public ArrayList<Usuario> getUsuarios() {
         return this.usuarios;
     }
+
+    @Override
+    public String toString() {
+        return "SistemaDeGestion{" +
+            "usuarios=" + usuarios +
+            ", sucursales=" + sucursales +
+            ", pacientes=" + pacientes +
+            '}';
+    }
 }

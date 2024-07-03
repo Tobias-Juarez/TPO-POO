@@ -1,5 +1,6 @@
 package vista.menu.usuarios;
 
+import controller.SistemaDeGestion;
 import java.awt.Window;
 import javax.swing.*;
 
@@ -25,7 +26,7 @@ public class FrmAltaUsuario extends JDialog {
   private JLabel lblFechaNacimiento;
   private JLabel lblRol;
 
-  public FrmAltaUsuario(Window owner, String titulo) {
+  public FrmAltaUsuario(Window owner, String titulo, SistemaDeGestion sistemaDeGestion) {
     super(owner, titulo);
     setContentPane(pnlPrincipal);
     setModal(true);

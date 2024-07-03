@@ -35,6 +35,20 @@ public class Usuario {
         return usuario;
     }
 
+    @Override
+    public String toString() {
+        return "Usuario{" +
+            "nombre='" + nombre + '\'' +
+            ", email='" + email + '\'' +
+            ", usuario='" + usuario + '\'' +
+            ", password='" + password + '\'' +
+            ", domicilio='" + domicilio + '\'' +
+            ", dni=" + dni +
+            ", fechaNacimiento=" + fechaNacimiento +
+            ", rol=" + rol +
+            '}';
+    }
+
     public void setUsuario(String usuario) {
         this.usuario = usuario;
     }

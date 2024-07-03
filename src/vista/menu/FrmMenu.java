@@ -34,12 +34,12 @@ public class FrmMenu extends JDialog {
         setSize(500, 400);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
-        asociarEventos(rol);
+        asociarEventos(rol, sistemaDeGestion, laboratorio, atencionAlPublico);
         this.self = this;
 
     }
 
-    private void asociarEventos(RolUsuario rol) {
+    private void asociarEventos(RolUsuario rol, SistemaDeGestion sistemaDeGestion, Laboratorio laboratorio, AtencionAlPublico atencionAlPublico) {
         if (rol == RolUsuario.RECEPCIONISTA) {
             practicasButton.setEnabled(false);
             usuariosButton.setEnabled(false);
@@ -94,7 +94,7 @@ public class FrmMenu extends JDialog {
         usuariosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FrmUsuarios frame = new FrmUsuarios(self, "Usuarios");
+                FrmUsuarios frame = new FrmUsuarios(self, "Usuarios", sistemaDeGestion);
                 frame.setVisible(true);
 
             }

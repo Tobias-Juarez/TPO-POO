@@ -10,6 +10,15 @@ import java.util.ArrayList;
 public class SistemaDeGestion {
     private static SistemaDeGestion instance;
     private ArrayList<Usuario> usuarios;
+
+    public ArrayList<Sucursal> getSucursales() {
+        return sucursales;
+    }
+
+    public void setSucursales(ArrayList<Sucursal> sucursales) {
+        this.sucursales = sucursales;
+    }
+
     private ArrayList<Sucursal> sucursales;
     private ArrayList<Paciente> pacientes;
     private SistemaDeGestion() {
@@ -23,15 +32,13 @@ public class SistemaDeGestion {
         }
         return instance;
     }
-    public void altaUsuario(Usuario nuevoUsuario) {
-        this.usuarios.add(nuevoUsuario);
+    public void altaUsuario(Usuario usuario) {
+        this.usuarios.add(usuario);
     }
-    public void altaSucursal(Sucursal sucursal) {
-        //TODO
-    }
-    public void eliminarSucursal(int sucursalId) {
-        //TODO
-    }
+    public void altaSucursal(int id, String direccion, int numero, boolean peticionesResultadosFinalizados) {
+        Sucursal sucursal= new Sucursal(id, direccion, numero, peticionesResultadosFinalizados);
+        this.sucursales.add(sucursal);}
+
 
     public ArrayList<Usuario> getUsuarios() {
         return this.usuarios;
@@ -67,6 +74,33 @@ public class SistemaDeGestion {
         for (int i = 0; i < usuarios.size(); i++) {
             if (usuarios.get(i).getUsuario().equals(usuario)) {
                 usuarios.remove(i);
+                return;
+            }
+        }
+    }
+
+  public boolean existeSucursal(int id) {
+      for (Sucursal s : sucursales) {
+          if (s.getId()== id) {
+              return true;
+          }
+      }
+      return false;
+  }
+
+    public Sucursal buscarSucursal(int id) {
+        for (Sucursal s : sucursales) {
+            if (s.getId() == id) {
+                return s;
+            }
+        }
+        return null;
+    }
+
+    public void bajaSucursal(int id) {
+        for (int i = 0; i < sucursales.size(); i++) {
+            if (sucursales.get(i).getId() == id) {
+                sucursales.remove(i);
                 return;
             }
         }

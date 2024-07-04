@@ -56,14 +56,14 @@ public class FrmPacientes extends JDialog {
     modificarPacienteButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        FrmModificarPaciente frame = new FrmModificarPaciente(self, "Modificar Paciente");
+        FrmModificarPaciente frame = new FrmModificarPaciente(self, "Modificar Paciente", atencionAlPublico, tableModel);
         frame.setVisible(true);
       }
     });
     eliminarPacienteButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        FrmBajaPaciente frame = new FrmBajaPaciente(self, "Baja Paciente");
+        FrmBajaPaciente frame = new FrmBajaPaciente(self, "Baja Paciente", atencionAlPublico, tableModel);
         frame.setVisible(true);
       }
     });

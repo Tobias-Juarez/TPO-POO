@@ -37,6 +37,14 @@ public class AtencionAlPublico {
     public void eliminarPaciente(int dni) {
         this.pacientes.removeIf(paciente -> paciente.getDni() == dni);
     }
+    public Paciente buscarPaciente(int dni) {
+        for (Paciente p : pacientes) {
+            if (p.getDni()==dni) {
+                return p;
+            }
+        }
+        return null;
+    }
 
     public void altaPeticion(Peticion peticion) {
         this.peticiones.add(peticion);
@@ -57,5 +65,14 @@ public class AtencionAlPublico {
 
     public boolean existePaciente(int dni) {
         return this.pacientes.stream().anyMatch(paciente -> paciente.getDni() == dni);
+    }
+
+    public void bajaPaciente(int dni) {
+        for (int i = 0; i < pacientes.size(); i++) {
+            if (pacientes.get(i).getDni() == dni) {
+                pacientes.remove(i);
+                return;
+            }
+        }
     }
 }

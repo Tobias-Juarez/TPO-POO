@@ -5,14 +5,30 @@ import java.util.ArrayList;
 public class Practica {
     private String codigo;
     private String nombre;
+
+    @Override
+    public String toString() {
+        return "Practica{" +
+            "codigo='" + codigo + '\'' +
+            ", nombre='" + nombre + '\'' +
+            ", grupo='" + grupo + '\'' +
+            ", demoraResultado=" + demoraResultado +
+            ", valor=" + valor +
+            ", valoresNumericos=" + valoresNumericos +
+            ", valoresString=" + valoresString +
+            '}';
+    }
+
     private String grupo;
     private int demoraResultado;
     private TipoValor valor;
     private ArrayList<ValorNumerico> valoresNumericos;
     private ArrayList<ValorString> valoresString;
-    public Practica() {
-        this.valoresNumericos = new ArrayList<>();
-        this.valoresString = new ArrayList<>();
+    public Practica(String codigo, String nombre, String grupo, int demoraResultado) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.grupo = grupo;
+        this.demoraResultado = demoraResultado;
     }
 
     public String getCodigo() {

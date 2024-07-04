@@ -7,6 +7,22 @@ public class Sucursal {
     private String direccion;
     private int numero;
     private boolean peticionResultadosFinalizados;
+
+    public Sucursal(int id, String direccion, int numero, boolean peticionResultadosFinalizados) {
+        this.id = id;
+        this.direccion = direccion;
+        this.numero = numero;
+        this.peticionResultadosFinalizados = peticionResultadosFinalizados;
+    }
+
+    public ArrayList<Peticion> getPeticiones() {
+        return peticiones;
+    }
+
+    public void setPeticiones(ArrayList<Peticion> peticiones) {
+        this.peticiones = peticiones;
+    }
+
     private ArrayList<Peticion> peticiones;
 
     public int getId() {

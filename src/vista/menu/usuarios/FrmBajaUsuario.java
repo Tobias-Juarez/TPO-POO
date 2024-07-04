@@ -34,6 +34,7 @@ public class FrmBajaUsuario extends JDialog {
       }else {
         sistemaDeGestion.bajaUsuario(usuario);
         tableModel.remove(usuario);
+        JOptionPane.showMessageDialog(this, "Usuario eliminado con éxito", "Éxito", JOptionPane.INFORMATION_MESSAGE);
         dispose();
       }
     });

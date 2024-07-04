@@ -78,7 +78,7 @@ public class FrmModificarUsuario extends JDialog {
           u.setFechaNacimiento(fechaNacimiento);
           u.setRol(rol);
           tableModel.add(usuario,nombre,email,dni, rol, fechaNacimiento);
-          JOptionPane.showMessageDialog(this, "Usuario creado con éxito", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+          JOptionPane.showMessageDialog(this, "Usuario modificado con éxito", "Éxito", JOptionPane.INFORMATION_MESSAGE);
           this.dispose();
         }
       } catch (NumberFormatException r) {

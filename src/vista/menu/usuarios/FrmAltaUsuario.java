@@ -63,8 +63,7 @@ public class FrmAltaUsuario extends JDialog {
         int dni = Integer.parseInt(input);
         if (nombre.isEmpty() || email.isEmpty() || usuario.isEmpty() || password.isEmpty() || domicilio.isEmpty() || dni == 0 || fechaNacimiento.isEmpty() || rol == null) {
           JOptionPane.showMessageDialog(this, "Debe completar todos los campos", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-        if (sistemaDeGestion.existeUsuario(usuario)){
+        }else if (sistemaDeGestion.existeUsuario(usuario)){
             JOptionPane.showMessageDialog(this, "El usuario ya existe", "Error", JOptionPane.ERROR_MESSAGE);
         }else {
           Usuario u = new Usuario();

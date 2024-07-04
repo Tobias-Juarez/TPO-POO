@@ -62,7 +62,7 @@ public class FrmMenu extends JDialog {
         sucursalesButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FrmSucursales frame = new FrmSucursales (self, "Sucursales");
+                FrmSucursales frame = new FrmSucursales (self, "Sucursales", sistemaDeGestion);
                 frame.setVisible(true);
 
             }
@@ -70,7 +70,7 @@ public class FrmMenu extends JDialog {
         practicasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FrmPracticas frame = new FrmPracticas(self, "Practicas");
+                FrmPracticas frame = new FrmPracticas(self, "Practicas", laboratorio);
                 frame.setVisible(true);
 
             }

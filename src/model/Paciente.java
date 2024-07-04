@@ -29,14 +29,6 @@ public class Paciente {
         this.peticiones = peticiones;
     }
 
-    public Paciente() {
-      this.dni = dni;
-      this.nombre = nombre;
-      this.domicilio = domicilio;
-      this.mail = mail;
-      this.edad = edad;
-      this.peticiones = new ArrayList<Peticion>();
-    }
 
     public int getDni() {
         return this.dni;

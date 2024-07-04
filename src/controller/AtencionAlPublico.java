@@ -54,4 +54,8 @@ public class AtencionAlPublico {
     public ArrayList<Paciente> getPacientes() {
         return pacientes;
     }
+
+    public boolean existePaciente(int dni) {
+        return this.pacientes.stream().anyMatch(paciente -> paciente.getDni() == dni);
+    }
 }

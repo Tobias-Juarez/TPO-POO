@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Date;
-
 public class Usuario {
     private String nombre;
     private String email;
@@ -9,7 +7,7 @@ public class Usuario {
     private String password;
     private String domicilio;
     private int dni;
-    private Date fechaNacimiento;
+    private String fechaNacimiento;
     private RolUsuario rol;
 
     public Usuario() {
@@ -77,11 +75,11 @@ public class Usuario {
         this.dni = dni;
     }
 
-    public Date getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 

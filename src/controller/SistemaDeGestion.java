@@ -45,4 +45,30 @@ public class SistemaDeGestion {
             ", pacientes=" + pacientes +
             '}';
     }
+    public boolean existeUsuario(String usuario) {
+        for (Usuario u : usuarios) {
+            if (u.getUsuario().equals(usuario)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Usuario buscarUsuario(String usuario) {
+        for (Usuario u : usuarios) {
+            if (u.getUsuario().equals(usuario)) {
+                return u;
+            }
+        }
+        return null;
+    }
+
+    public void bajaUsuario(String usuario) {
+        for (int i = 0; i < usuarios.size(); i++) {
+            if (usuarios.get(i).getUsuario().equals(usuario)) {
+                usuarios.remove(i);
+                return;
+            }
+        }
+    }
 }

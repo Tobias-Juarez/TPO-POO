@@ -61,7 +61,7 @@ public class FrmCrearUsuario extends JDialog {
                     JOptionPane.showMessageDialog(null, "Debe completar todos los campos");
                 }
                 else {
-                    if (sistemaDeGestion.getUsuarios().stream().anyMatch(u -> u.getUsuario().equals(usuario))) {
+                    if (sistemaDeGestion.existeUsuario(usuario)) {
                         JOptionPane.showMessageDialog(null, "El usuario ya existe");
                     } else {
                         nuevoUsuario = new Usuario();

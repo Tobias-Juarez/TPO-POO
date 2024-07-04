@@ -55,7 +55,7 @@ public class FrmMenu extends JDialog {
         pacientesButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FrmPacientes frame = new FrmPacientes(self, "Pacientes", rol);
+                FrmPacientes frame = new FrmPacientes(self, "Pacientes", rol, atencionAlPublico);
                 frame.setVisible(true);
             }
         });

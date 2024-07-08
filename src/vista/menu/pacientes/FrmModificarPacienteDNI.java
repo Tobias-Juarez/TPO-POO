@@ -15,6 +15,8 @@ public class FrmModificarPacienteDNI extends JDialog {
     private JButton confirmarButton;
     private JLabel frmBanner;
     private JLabel txtLabel;
+    private FrmModificarPacienteDNI self;
+
 
     public FrmModificarPacienteDNI(Window owner, String titulo, AtencionAlPublico atencionAlPublico, TablePaciente tableModel)
     {
@@ -24,10 +26,10 @@ public class FrmModificarPacienteDNI extends JDialog {
         setSize(500, 400);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
-        asociarEventos();
+        asociarEventos(atencionAlPublico, tableModel);
     }
 
-    private void asociarEventos()
+    private void asociarEventos(AtencionAlPublico atencionAlPublico, TablePaciente tableModel)
     {
        confirmarButton.addActionListener(new ActionListener()
        {
@@ -37,7 +39,7 @@ public class FrmModificarPacienteDNI extends JDialog {
                 String documento = textDni.getText();
                 if(AtencionAlPublico.getInstance().existePaciente(Integer.parseInt(documento)))
                 {
-                    FrmModificarPaciente frame = new FrmModificarPaciente(this, "Modificar Paciente",AtencionAlPublico, TablePaciente);
+                    FrmModificarPaciente frame = new FrmModificarPaciente(self, "Modificar Paciente", atencionAlPublico, tableModel, AtencionAlPublico.getInstance().getPacientes().get(Integer.parseInt(documento)));
                     frame.setVisible(true);
                 }
                 else

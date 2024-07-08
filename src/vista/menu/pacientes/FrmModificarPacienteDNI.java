@@ -2,15 +2,10 @@ package vista.menu.pacientes;
 
 import controller.AtencionAlPublico;
 import utils.TablePaciente;
-import java.awt.Window;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import model.Paciente;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 public class FrmModificarPacienteDNI extends JDialog {

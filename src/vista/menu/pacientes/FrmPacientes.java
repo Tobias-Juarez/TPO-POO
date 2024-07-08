@@ -3,12 +3,11 @@ package vista.menu.pacientes;
 import controller.AtencionAlPublico;
 import model.RolUsuario;
 import utils.TablePaciente;
-import utils.TableUsuario;
 
-import java.awt.Window;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.*;
 
 public class FrmPacientes extends JDialog {
 
@@ -56,7 +55,7 @@ public class FrmPacientes extends JDialog {
     modificarPacienteButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        FrmModificarPaciente frame = new FrmModificarPaciente(self, "Modificar Paciente", atencionAlPublico, tableModel);
+        FrmModificarPacienteDNI frame = new FrmModificarPacienteDNI(self, "Modificar Paciente", atencionAlPublico, tableModel);
         frame.setVisible(true);
       }
     });

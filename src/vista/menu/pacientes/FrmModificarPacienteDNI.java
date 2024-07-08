@@ -37,7 +37,7 @@ public class FrmModificarPacienteDNI extends JDialog {
                 String documento = textDni.getText();
                 if(AtencionAlPublico.getInstance().existePaciente(Integer.parseInt(documento)))
                 {
-                    FrmModificarPaciente frame = new FrmModificarPaciente(FrmPacientes, "Modificar Paciente",AtencionAlPublico, TablePaciente);
+                    FrmModificarPaciente frame = new FrmModificarPaciente(this, "Modificar Paciente",AtencionAlPublico, TablePaciente);
                     frame.setVisible(true);
                 }
                 else
